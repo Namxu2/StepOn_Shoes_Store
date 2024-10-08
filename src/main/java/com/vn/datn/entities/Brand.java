@@ -15,8 +15,8 @@ public class Brand implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    private Integer id;
+    @Column(name = "brand_id") // Tên cột phải trùng khớp với tên cột trong cơ sở dữ liệu
+    private Integer brandId; // Tên thuộc tính là 'id'
 
     @Column(name = "brand_code", length = 50)
     private String brandCode;

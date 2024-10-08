@@ -18,8 +18,8 @@ public class Size implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    private Long id; // Corresponds to `id`
+    @Column(name = "size_id")
+    private Long sizeId; // Corresponds to `id`
 
     @Column(name = "size_code", length = 50)
     private String sizeCode; // Corresponds to `size_code`

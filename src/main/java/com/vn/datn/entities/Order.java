@@ -13,7 +13,8 @@ public class Order {
 
     @Column(name = "address")
     private String address;
-
+    @Column(name = "amount")
+    private Double amount;
     @Column(name = "phone")
     private String phone;
 
@@ -36,6 +37,21 @@ public class Order {
     private Date orderDate;
 
     // Getters and Setters
+    public Order() {
+    }
+
+    public Order(Integer orderId, String address, Double amount, String phone, User user, Integer statusPayment, Integer statusTransport, String note, Date orderDate) {
+        this.orderId = orderId;
+        this.address = address;
+        this.amount = amount;
+        this.phone = phone;
+        this.user = user;
+        this.statusPayment = statusPayment;
+        this.statusTransport = statusTransport;
+        this.note = note;
+        this.orderDate = orderDate;
+    }
+
     public Integer getOrderId() {
         return orderId;
     }
@@ -50,6 +66,14 @@ public class Order {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public Double getAmount() {
+        return amount;
+    }
+
+    public void setAmount(Double amount) {
+        this.amount = amount;
     }
 
     public String getPhone() {
@@ -76,11 +100,11 @@ public class Order {
         this.statusPayment = statusPayment;
     }
 
-    public Integer getStatusTransport() {
+    public int getStatusTransport() {
         return statusTransport;
     }
 
-    public void setStatusTransport(Integer statusTransport) {
+    public void setStatusTransport(int statusTransport) {
         this.statusTransport = statusTransport;
     }
 
@@ -99,6 +123,4 @@ public class Order {
     public void setOrderDate(Date orderDate) {
         this.orderDate = orderDate;
     }
-
-
 }
