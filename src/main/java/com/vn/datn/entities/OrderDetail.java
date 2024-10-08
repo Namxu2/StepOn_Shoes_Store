@@ -22,7 +22,7 @@ public class OrderDetail {
 	private Order order;
 
 	@ManyToOne
-	@JoinColumn(name = "product_id", referencedColumnName = "id", foreignKey = @ForeignKey(name = "FK_product_order_detail"), nullable = true)
+	@JoinColumn(name = "product_id", referencedColumnName = "product_id", foreignKey = @ForeignKey(name = "FK_product_order_detail"), nullable = true)
 	private Product product;
 
 	// Getters and Setters
